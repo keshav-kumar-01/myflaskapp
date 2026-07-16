@@ -6,7 +6,7 @@ application = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@application.route('/submit',method=['POST'])
+@application.route('/submit',methods=['POST'])
 def submit():
     username = request.form.get('username')
     return render_template('home.html',username=username)
